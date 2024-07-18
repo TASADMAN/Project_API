@@ -1,12 +1,15 @@
 import e from "express";
 import cors from "cors";
-import dotenv from "dotenv";
+import dotenv, { config } from "dotenv";
 
 
 const app = e()
 app.use(e.json())
 app.use(cors())
 
+app.post('/test', (req, res, next) => {
+    console.log("create user");
+})
 
 
 app.get('/test', (req, res, next) => {
